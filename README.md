@@ -16,18 +16,17 @@ Este projeto simula a criação de um modelo de **previsão de estoque** utiliza
 
 aws-sagemaker-canvas-estoque/
 ├── previsao_estoque_simulado.py # Script principal com dataset e previsões
+
 └── README.md # Este arquivo
 
-yaml
-Copiar código
 
-> Observação: Neste projeto, o dataset está **integrado diretamente no script**, não sendo necessário CSV.
+# Observação: Neste projeto, o dataset está **integrado diretamente no script**, não sendo necessário CSV.
 
----
 
 ## Passo a Passo do Projeto
 
 ### 1. Dataset
+
 O dataset simulado contém informações de estoque e vendas de três produtos ao longo de três meses:
 
 | Produto | Estoque atual | Preço unitário | Mês | Quantidade vendida |
@@ -71,10 +70,7 @@ Produto Estoque_atual Previsao_vendas
 1 Caderno 270 216
 2 Mochila 135 108
 
-yaml
-Copiar código
 
----
 
 ### 3. Insights Estratégicos
 
