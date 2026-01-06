@@ -15,9 +15,10 @@ Este projeto simula a criação de um modelo de **previsão de estoque** utiliza
 ## Estrutura do Projeto
 
 aws-sagemaker-canvas-estoque/
+
 ├── previsao_estoque_simulado.py # Script principal com dataset e previsões
 
-      └── README.md # Este arquivo
+└── README.md # Este arquivo
 
 
 # Observação: Neste projeto, o dataset está **integrado diretamente no script**, não sendo necessário CSV.
