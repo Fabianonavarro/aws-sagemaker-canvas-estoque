@@ -16,9 +16,9 @@ Este projeto simula a criação de um modelo de **previsão de estoque** utiliza
 
 aws-sagemaker-canvas-estoque/
 
-├── previsao_estoque_simulado.py # Script principal com dataset e previsões
+├── previsao_estoque_simulado.py       # Script principal com dataset e previsões
 
-└── README.md # Este arquivo
+└── README.md                          # Este arquivo
 
 
 # Observação: Neste projeto, o dataset está **integrado diretamente no script**, não sendo necessário CSV.
@@ -81,15 +81,26 @@ Produto Estoque_atual Previsao_vendas
 
 ---
 
-## Próximos Passos / Extensões
-
-- Adicionar mais variáveis (promoções, feriados, clima) para melhorar a previsão.
-- Criar gráficos de tendência com matplotlib ou seaborn.
-- Simular diferentes modelos de previsão (por exemplo, ajustando o percentual de previsão).
-
----
-
 ## Referências
 
 - [Documentação do SageMaker Canvas](https://docs.aws.amazon.com/sagemaker/latest/dg/canvas.html)
 - [Repositório Base da DIO](https://github.com/digitalinnovationone/lab-aws-sagemaker-canvas-estoque)
+
+#IA
+Conhecimentos em Inteligência Artificial aplicada à análise de dados, utilizando Python para tratamento, análise e geração de insights, com foco em automação de processos, visualização de dados e apoio à tomada de decisão. Experiência adquirida por meio de projetos práticos e cursos em Ciência de Dados, Data Analytics e IA, integrados a ambientes em nuvem (AWS).
+Portfólio e Projetos:
+
+• Portfólio: https://portifolionavinfo.netlify.app/
+
+• DIO: https://www.dio.me/users/nav_info_suporte
+
+• GitHub: https://github.com/Fabianonavarro
+
+• LinkedIn: https://www.linkedin.com/in/fabiano-de-navarro
+
+
+#Conhecimentos em Inteligência Artificial
+
+Experiência prática em Inteligência Artificial e análise de dados, aplicando técnicas de Machine Learning para tratamento, análise e interpretação de dados, utilizando Python e bibliotecas especializadas.
+Habilidade em automação de processos, visualização de dados e geração de insights estratégicos para apoiar decisões de negócios.
+Experiência adquirida por meio de projetos práticos e cursos em Ciência de Dados, Data Analytics e IA, com integração em ambientes em nuvem (AWS).
