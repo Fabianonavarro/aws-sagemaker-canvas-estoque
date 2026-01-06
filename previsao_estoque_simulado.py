@@ -38,3 +38,13 @@ print(df[['Produto', 'Estoque_atual', 'Previsao_vendas']])
 resumo = df.groupby('Produto')[['Estoque_atual', 'Previsao_vendas']].sum().reset_index()
 print("\n=== Resumo Total por Produto ===")
 print(resumo)
+
+# ====== NOVO: Análise de Percentis P10, P50 e P100 ======
+percentis = df.groupby('Produto')['Previsao_vendas'].agg(
+    P10=lambda x: x.quantile(0.1),
+    P50=lambda x: x.quantile(0.5),
+    P100=lambda x: x.quantile(1.0)
+).reset_index()
+
+print("\n=== Percentis de Previsão de Vendas por Produto ===")
+print(percentis)
