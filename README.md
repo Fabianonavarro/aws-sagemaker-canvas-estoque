@@ -24,32 +24,34 @@ aws-sagemaker-canvas-estoque/
 # Observação: Neste projeto, o dataset está **integrado diretamente no script**, não sendo necessário CSV.
 
 
-## Passo a Passo do Projeto
-
-### 1. Dataset
+Passo a Passo do Projeto
+1. Dataset
 
 O dataset simulado contém informações de estoque e vendas de três produtos ao longo de três meses:
 
-| Produto | Estoque atual | Preço unitário | Mês | Quantidade vendida |
-|---------|---------------|----------------|-----|------------------|
-| Caneta  | 200           | 1.50           | 1   | 150              |
-| Caderno | 100           | 5.00           | 1   | 80               |
-| Mochila | 50            | 50.00          | 1   | 40               |
-| ...     | ...           | ...            | ... | ...              |
+Produto	Estoque atual	Preço unitário	Mês	Quantidade vendida
+Caneta	200	1.50	1	150
+Caderno	100	5.00	1	80
+Mochila	50	50.00	1	40
+...	...	...	...	...
 
-> O dataset é fictício e serve para simular previsões como se fosse no SageMaker Canvas.
+O dataset é fictício e serve para simular previsões como se fosse no SageMaker Canvas.
 
----
+2. Script de Previsão
 
-### 2. Script de Previsão
+O script previsao_estoque_simulado.py:
 
-O script `previsao_estoque_simulado.py`:
+Cria o dataset em memória.
 
-- Cria o dataset em memória.
-- Calcula a **previsão de vendas** como 80% do estoque atual.
-- Gera duas saídas:
-  1. Tabela detalhada de previsão por produto e mês.
-  2. Resumo total de estoque e previsão por produto.
+Calcula a previsão de vendas como 80% do estoque atual.
+
+Gera três saídas:
+
+Tabela detalhada de previsão por produto e mês.
+
+Resumo total de estoque e previsão por produto.
+
+Percentis de previsão de vendas (P10, P50, P100) por produto.
 
 Exemplo de execução:
 
@@ -59,11 +61,7 @@ Produto Estoque_atual Previsao_vendas
 1 Caderno 100 80
 2 Mochila 50 40
 3 Caneta 180 144
-4 Caderno 90 72
-5 Mochila 45 36
-6 Caneta 170 136
-7 Caderno 80 64
-8 Mochila 40 32
+...
 
 === Resumo Total por Produto ===
 Produto Estoque_atual Previsao_vendas
@@ -71,13 +69,19 @@ Produto Estoque_atual Previsao_vendas
 1 Caderno 270 216
 2 Mochila 135 108
 
-
+=== Percentis de Previsão de Vendas por Produto ===
+Produto   P10   P50  P100
+0 Caneta  136  144   160
+1 Caderno  64   72    80
+2 Mochila  32   36    40
 
 ### 3. Insights Estratégicos
 
-- Produtos com estoque maior terão maior previsão de vendas.
-- O modelo simulado permite planejar reabastecimento para evitar excesso ou falta de produtos.
-- Apesar de ser uma simulação, cobre todo o fluxo de trabalho do SageMaker Canvas: **dataset → previsão → análise de resultados → insights**.
+Produtos com estoque maior terão maior previsão de vendas.
+
+Percentis P10, P50 e P100 permitem planejar cenários conservador, médio e máximo de demanda.
+
+O modelo simulado cobre todo o fluxo de trabalho do SageMaker Canvas: dataset → previsão → análise de resultados → insights estratég
 
 ---
 
